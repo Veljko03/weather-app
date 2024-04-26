@@ -1,3 +1,59 @@
-h1 {
-  color: red;
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+.container {
+  height: 100%;
+  background-color: rgb(16, 16, 40);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.city {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.temp {
+  display: flex;
+  gap: 35px;
+}
+.temperature {
+  font-size: 80px;
+  color: white;
+  font-weight: bold;
+}
+.flBox {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 22px;
+  justify-content: center;
+}
+
+.cityName {
+  font-size: 35px;
+  color: white;
+}
+.enterLocation {
+  display: flex;
+  margin-top: 30px;
+  height: 50px;
+  gap: 20px;
+}
+#currLocation {
+  border-radius: 5px;
+  border: 1px solid white;
+  width: 250px;
+}
+#btnConfirm {
+  border-radius: 5px;
+  border: 1px solid white;
+  width: 100px;
+  background-color: white;
+  font-weight: bolder;
+}
+#btnConfirm:hover {
+  cursor: pointer;
 }
