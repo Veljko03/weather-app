@@ -18,22 +18,37 @@ export default async function fetchData() {
     const temperature = data.current.temp_c;
     const fl = data.current.feelslike_c;
     const wi = data.current.wind_kph;
+    const cond = data.current.condition.text;
+    const icon = data.current.condition.icon;
 
     console.log(data);
-    makeHtmlForNewCity(cityName, countryName, temperature, fl, wi);
+    makeHtmlForNewCity(cityName, countryName, temperature, fl, wi, cond, icon);
   } catch (error) {
     alert(error);
   }
 }
 
-function makeHtmlForNewCity(cityName, countryName, temperature, fl, wi) {
+function makeHtmlForNewCity(
+  cityName,
+  countryName,
+  temperature,
+  fl,
+  wi,
+  cond,
+  icon
+) {
   const displayCity = document.querySelector(".cityName");
   const temp = document.querySelector(".temperature");
   const feelsLike = document.querySelector(".feelsLike");
   const wind = document.querySelector(".wind");
+  const weatherCondition = document.querySelector(".condition");
+  const pic = document.querySelector("#conPic");
 
   displayCity.textContent = `${cityName}, ${countryName}`;
   temp.textContent = `${temperature}°C`;
   feelsLike.textContent = `Feels like ${fl}°C`;
   wind.textContent = "Wind: " + wi + "km/h";
+  weatherCondition.textContent = cond;
+  pic.src = icon;
+  pic.style.display = "block";
 }

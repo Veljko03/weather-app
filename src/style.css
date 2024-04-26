@@ -15,9 +15,19 @@ html {
   display: flex;
   flex-direction: column;
 }
+.con {
+  display: flex;
+  font-size: 35px;
+  color: white;
+}
 .temp {
   display: flex;
   gap: 35px;
+}
+img {
+  justify-self: center;
+  width: 80px;
+  height: 80px;
 }
 .temperature {
   font-size: 80px;
