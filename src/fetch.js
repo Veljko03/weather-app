@@ -10,7 +10,7 @@ export default async function fetchData() {
     );
 
     if (!response.ok) {
-      throw new Error("Could not fetch resources");
+      throw new Error("Enter a valid city name");
     }
     const data = await response.json();
     const cityName = data.location.name;
